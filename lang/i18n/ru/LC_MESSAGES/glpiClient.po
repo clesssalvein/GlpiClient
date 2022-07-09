@@ -1,0 +1,294 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "test"
+msgstr "тест"
+
+msgid "App language is"
+msgstr "Язык приложения"
+
+msgid "English"
+msgstr "Русский"
+
+msgid "auth.ini exists!"
+msgstr "auth.ini существует!"
+
+msgid "auth.ini is a file!"
+msgstr "auth.ini это файл!"
+
+msgid "auth.ini is a directory! delete directory auth.ini"
+msgstr "auth.ini это директория! удаляем директорию auth.ini"
+
+msgid "Create auth.ini"
+msgstr "Создаем auth.ini"
+
+msgid "auth.ini doesn't exist! create auth.ini"
+msgstr "auth.ini НЕ существует! Создаем auth.ini"
+
+msgid "The program is already running"
+msgstr "Программа уже запущена"
+
+msgid "Quit"
+msgstr "Выход"
+
+msgid "Authorization"
+msgstr "Авторизация"
+
+msgid "Login"
+msgstr "Логин"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Login doesn't exist in auth.ini"
+msgstr "Нет логина в auth.ini"
+
+msgid "Password doesn't exist in auth.ini"
+msgstr "Нет пароля в auth.ini"
+
+msgid "Remember Login and Password"
+msgstr "Запомнить Логин и Пароль"
+
+msgid "Sign in"
+msgstr "Войти"
+
+msgid "Auth error"
+msgstr "Ошибка авторизации"
+
+msgid "sessionTokenJson is NOT correct"
+msgstr "sessionTokenJson НЕкорректен"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Restart application to apply settings"
+msgstr "Перезапустите приложение чтобы применить новые настройки"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "About..."
+msgstr "О программе..."
+
+msgid "sessionTokenJson is correct"
+msgstr "sessionTokenJson кореектен"
+
+msgid "Auth error. 'session_token' not found"
+msgstr "Ошибка авторизации. 'session_token' не найден"
+
+msgid "Auth success. 'session_token' found"
+msgstr "Авторизация успешна. 'session_token' найден"
+
+msgid "Connection error"
+msgstr "Ошибка подключения"
+
+msgid "is minimized to the system tray"
+msgstr "свернута в системный лоток"
+
+msgid "Failed to download an update"
+msgstr "Не удалось скачать обновление"
+
+msgid "Sign out"
+msgstr "Выйти"
+
+msgid "Create new ticket"
+msgstr "Создать новую заявку"
+
+msgid "My tickets"
+msgstr "Мои заявки"
+
+msgid "Open tickets only"
+msgstr "Только открытые заявки"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "You have no tickets"
+msgstr "У вас нет заявок"
+
+msgid "Tickets not found"
+msgstr "Заявки не найдены"
+
+msgid "Ticket ID"
+msgstr "ID заявки"
+
+msgid "Creation date"
+msgstr "Дата создания"
+
+msgid "Ticket creation date and time"
+msgstr "Дата и время создания заявки"
+
+msgid "Name"
+msgstr "Наименование"
+
+msgid "Ticket name"
+msgstr "Наименование заявки"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Ticket status"
+msgstr "Статус заявки"
+
+msgid "New"
+msgstr "Новая"
+
+msgid "In progress (assigned)"
+msgstr "В работе (назначена)"
+
+msgid "In progress (planned)"
+msgstr "В работе (запланирована)"
+
+msgid "Awaiting decision"
+msgstr "Ожидает решения"
+
+msgid "Solved"
+msgstr "Решена"
+
+msgid "Closed"
+msgstr "Закрыта"
+
+msgid "Update a list of tickets"
+msgstr "Обновить список заявок"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Contact phone"
+msgstr "Телефон для связи"
+
+msgid "Problem computer number"
+msgstr "Номер проблемного компьютера"
+
+msgid "Describe your problem..."
+msgstr "Опишите вашу проблему..."
+
+msgid "From"
+msgstr "С"
+
+msgid "To"
+msgstr "По"
+
+msgid "Attach a screenshot"
+msgstr "Прикрепить снимок экрана"
+
+msgid "To attach a screenshot,\npress the 'PrintScreen' key on your keyboard,\nand then the 'Attach a screenshot' button"
+msgstr "Для прикрепления снимка экрана\nнажмите клавишу 'PrintScreen' на вашей клавиатуре,\nа затем кнопку 'Прикрепить снимок экрана"
+
+msgid "Press the 'PrintScreen' key on your keyboard\n and then the 'Attach a screenshot' button"
+msgstr "Нажмите клавишу 'PrintScreen' на вашей клавиатуре,\nа затем кнопку 'Прикрепить снимок экрана'"
+
+msgid "Attach an Image"
+msgstr "Прикрепить изображение"
+
+msgid "Click the 'Attach an Image' button"
+msgstr "Нажмите кнопку 'Прикрепить изображение'"
+
+msgid "Create Ticket"
+msgstr "Создать заявку"
+
+msgid "Screenshot attached to the ticket!"
+msgstr "Снимок экрана прикреплен к заявке"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Error attaching a screenshot.\nTo attach a screenshot, press the 'PrintScreen' key on your keyboard and then the 'Attach a screenshot' button'"
+msgstr "Ошибка прикрепления скриншота.\nДля прикрепления скриншота экрана нажмите клавишу 'PrintScreen' на вашей клавиатуре, а затем кнопку 'Прикрепить снимок экрана'"
+
+msgid "Please fill in all required fields"
+msgstr "Пожалуйста, заполните все обязательные поля"
+
+msgid "Computer name"
+msgstr "Имя компьютера"
+
+msgid "Customer phone"
+msgstr "Телефон заказчика"
+
+msgid "Ticket accepted"
+msgstr "Заявка принята"
+
+msgid "Your ticket has been accepted under the number"
+msgstr "Ваша заявка принята под номером"
+
+msgid "Ticket"
+msgstr "Заявка"
+
+msgid "Solution"
+msgstr "Решение"
+
+msgid "Comments"
+msgstr "Комментарии"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Ticket text"
+msgstr "Текст заявки"
+
+msgid "Specialist"
+msgstr "Специалист"
+
+msgid "Assigned specialist"
+msgstr "Назначенный специалист"
+
+msgid "Group of specialists"
+msgstr "Группа специалистов"
+
+msgid "Assigned group of specialists"
+msgstr "Назначенная группа специалистов"
+
+msgid "Solution text"
+msgstr "Текст решения"
+
+msgid "There is no solution"
+msgstr "Решение отсутствует"
+
+msgid "Comment"
+msgstr "Комментарий"
+
+msgid "Comment text"
+msgstr "Текст комментария"
+
+msgid "Me"
+msgstr "Я"
+
+msgid "There is no comments"
+msgstr "Комментарии отсутствуют"
+
+msgid "Write a comment..."
+msgstr "Напишите комментарий..."
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Comments cannot be added to the closed ticket"
+msgstr "В закрытые заявки нельзя дописывать комментарии"
+
+msgid "Comment field must not be empty"
+msgstr "Поле комментария не должно быть пустым"
+
+msgid "App update..."
+msgstr "Обновление программы..."
+
+msgid "Fail to unzip update"
+msgstr "Не удалось распаковать обновление"
+
+msgid "Fail to download update"
+msgstr "Не удалось скачать обновление"
+
+msgid "This window will close automatically..."
+msgstr "Это окно закроется автоматически..."
+
+msgid "App autoupdate"
+msgstr "Автообновление программы"
