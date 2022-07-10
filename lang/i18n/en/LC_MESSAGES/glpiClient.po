@@ -1,0 +1,294 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "test"
+msgstr "test"
+
+msgid "App language is"
+msgstr "App language is"
+
+msgid "English"
+msgstr "English"
+
+msgid "auth.ini exists!"
+msgstr "auth.ini exists!"
+
+msgid "auth.ini is a file!"
+msgstr "auth.ini is a file!"
+
+msgid "auth.ini is a directory! delete directory auth.ini"
+msgstr "auth.ini is a directory! delete directory auth.ini"
+
+msgid "Create auth.ini"
+msgstr "Create auth.ini"
+
+msgid "auth.ini doesn't exist! create auth.ini"
+msgstr "auth.ini doesn't exist! create auth.ini"
+
+msgid "The program is already running"
+msgstr "The program is already running"
+
+msgid "Quit"
+msgstr "Quit"
+
+msgid "Authorization"
+msgstr "Authorization"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Login doesn't exist in auth.ini"
+msgstr "Login doesn't exist in auth.ini"
+
+msgid "Password doesn't exist in auth.ini"
+msgstr "Password doesn't exist in auth.ini"
+
+msgid "Remember Login and Password"
+msgstr "Remember Login and Password"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "Auth error"
+msgstr "Auth error"
+
+msgid "sessionTokenJson is NOT correct"
+msgstr "sessionTokenJson is NOT correct"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Restart application to apply settings"
+msgstr "Restart application to apply settings"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "About..."
+msgstr "About..."
+
+msgid "sessionTokenJson is correct"
+msgstr "sessionTokenJson is correct"
+
+msgid "Auth error. 'session_token' not found"
+msgstr "Auth error. 'session_token' not found"
+
+msgid "Auth success. 'session_token' found"
+msgstr "Auth success. 'session_token' found"
+
+msgid "Connection error"
+msgstr "Connection error"
+
+msgid "is minimized to the system tray"
+msgstr "is minimized to the system tray"
+
+msgid "Failed to download an update"
+msgstr "Failed to download an update"
+
+msgid "Sign out"
+msgstr "Sign out"
+
+msgid "Create new ticket"
+msgstr "Create new ticket"
+
+msgid "My tickets"
+msgstr "My tickets"
+
+msgid "Open tickets only"
+msgstr "Open tickets only"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "You have no tickets"
+msgstr "You have no tickets"
+
+msgid "Tickets not found"
+msgstr "Tickets not found"
+
+msgid "Ticket ID"
+msgstr "Ticket ID"
+
+msgid "Creation date"
+msgstr "Creation date"
+
+msgid "Ticket creation date and time"
+msgstr "Ticket creation date and time"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Ticket name"
+msgstr "Ticket name"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Ticket status"
+msgstr "Ticket status"
+
+msgid "New"
+msgstr "New"
+
+msgid "In progress (assigned)"
+msgstr "In progress (assigned)"
+
+msgid "In progress (planned)"
+msgstr "In progress (planned)"
+
+msgid "Awaiting decision"
+msgstr "Awaiting decision"
+
+msgid "Solved"
+msgstr "Solved"
+
+msgid "Closed"
+msgstr "Closed"
+
+msgid "Update a list of tickets"
+msgstr "Update a list of tickets"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Contact phone"
+msgstr "Contact phone"
+
+msgid "Problem computer number"
+msgstr "Problem computer number"
+
+msgid "Describe your problem..."
+msgstr "Describe your problem..."
+
+msgid "From"
+msgstr "From"
+
+msgid "To"
+msgstr "To"
+
+msgid "Attach a screenshot"
+msgstr "Attach a screenshot"
+
+msgid "To attach a screenshot,\npress the 'PrintScreen' key on your keyboard,\nand then the 'Attach a Screenshot' button"
+msgstr "To attach a screenshot,\npress the 'PrintScreen' key on your keyboard,\nand then the 'Attach a Screenshot' button"
+
+msgid "Press the 'PrintScreen' key on your keyboard\n and then the 'Attach a Screenshot' button"
+msgstr "Press the 'PrintScreen' key on your keyboard\n and then the 'Attach a Screenshot' button"
+
+msgid "Attach an Image"
+msgstr "Attach an Image"
+
+msgid "Click the 'Attach an Image' button"
+msgstr "Click the 'Attach an Image' button"
+
+msgid "Create Ticket"
+msgstr "Create Ticket"
+
+msgid "Screenshot attached to the ticket!"
+msgstr "Screenshot attached to the ticket!"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Error attaching a screenshot.\nTo attach a screenshot, press the 'PrintScreen' key on your keyboard and then the 'Attach a Screenshot' button"
+msgstr "Error attaching a screenshot.\nTo attach a screenshot, press the 'PrintScreen' key on your keyboard and then the 'Attach a Screenshot' button"
+
+msgid "Please fill in all required fields"
+msgstr "Please fill in all required fields"
+
+msgid "Computer name"
+msgstr "Computer name"
+
+msgid "Customer phone"
+msgstr "Customer phone"
+
+msgid "Ticket accepted"
+msgstr "Заявка принята"
+
+msgid "Your ticket has been accepted under the number"
+msgstr "Your ticket has been accepted under the number"
+
+msgid "Ticket"
+msgstr "Ticket"
+
+msgid "Solution"
+msgstr "Solution"
+
+msgid "Comments"
+msgstr "Comments"
+
+msgid "Author"
+msgstr "Author"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Ticket text"
+msgstr "Ticket text"
+
+msgid "Specialist"
+msgstr "Specialist"
+
+msgid "Assigned specialist"
+msgstr "Assigned specialist"
+
+msgid "Group of specialists"
+msgstr "Group of specialists"
+
+msgid "Assigned group of specialists"
+msgstr "Assigned group of specialists"
+
+msgid "Solution text"
+msgstr "Solution text"
+
+msgid "There is no solution"
+msgstr "There is no solution"
+
+msgid "Comment"
+msgstr "Comment"
+
+msgid "Comment text"
+msgstr "Comment text"
+
+msgid "Me"
+msgstr "Me"
+
+msgid "There is no comments"
+msgstr "There is no comments"
+
+msgid "Write a comment..."
+msgstr "Write a comment..."
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Comments cannot be added to the closed ticket"
+msgstr "Comments cannot be added to the closed ticket"
+
+msgid "Comment field must not be empty"
+msgstr "Comment field must not be empty"
+
+msgid "App update..."
+msgstr "App update..."
+
+msgid "Fail to unzip update"
+msgstr "Fail to unzip update"
+
+msgid "Fail to download update"
+msgstr "Fail to download update"
+
+msgid "This window will close automatically..."
+msgstr "This window will close automatically..."
+
+msgid "App autoupdate"
+msgstr "App autoupdate"
