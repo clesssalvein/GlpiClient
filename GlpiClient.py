@@ -43,6 +43,8 @@ from sys import exit
 
 # APP START
 
+# debug
+
 # gettext multilang init
 _ = translate.gettext
 translate.install()
