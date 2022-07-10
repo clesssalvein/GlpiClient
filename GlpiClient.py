@@ -155,11 +155,19 @@ class AuthWin(QWidget):
         self.tray_icon.setIcon(QIcon("img\ico.png"))
         self.tray_icon.setToolTip(appName)
 
+        settings_action = QAction(_("Settings"), self)
+        settings_action.triggered.connect(self.settingsWinShow)
+
+        about_action = QAction(_("About..."), self)
+        about_action.triggered.connect(self.aboutWinShow)
+
         quit_action = QAction(_("Quit"), self)
         quit_action.triggered.connect(self.appClose)
 
         tray_menu = QMenu()
 
+        tray_menu.addAction(settings_action)
+        tray_menu.addAction(about_action)
         tray_menu.addAction(quit_action)
 
         self.tray_icon.setContextMenu(tray_menu)
@@ -466,6 +474,14 @@ class AuthWin(QWidget):
             #QSystemTrayIcon.Information,
             2000
         )
+
+    # about button
+    def aboutWinShow(self):
+        self.exec_ = AboutWin()
+
+    # settings button
+    def settingsWinShow(self):
+        self.exec_ = SettingsWin()
 
     #app close func
     def appClose(self):
@@ -1198,7 +1214,7 @@ class AboutWin(QWidget):
 
     def initUI(self):
         # create About win
-        self.setFixedSize(300, 250)
+        self.setFixedSize(300, 240)
         self.center()
         self.setWindowTitle(_("About..."))
         self.setWindowIcon(QIcon('img\ico.png'))
@@ -1252,7 +1268,7 @@ class SettingsWin(QWidget):
 
     def initUI(self):
         # create Settings win
-        self.setFixedSize(300, 250)
+        self.setFixedSize(300, 240)
         self.center()
         self.setWindowTitle(_("Settings"))
         self.setWindowIcon(QIcon('img\ico.png'))
