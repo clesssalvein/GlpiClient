@@ -46,3 +46,11 @@ Also you have to turn ON API and add App-token
 ## App-token:
 
 ![40-2](https://user-images.githubusercontent.com/9415718/179287701-66ce3eba-9ecb-469f-8ce7-631c76c9da61.jpg)
+
+# Usage
+
+- Run **GlpiClient.exe**, Sign in and feel free to use it!
+
+![50-1](https://user-images.githubusercontent.com/9415718/179288041-26aab0bb-9560-4c74-9abb-e2d3211c48bf.jpg)
+
+![50-2](https://user-images.githubusercontent.com/9415718/179288162-4396c771-e622-4fee-9828-990c3a244c41.jpg)
