@@ -13,7 +13,7 @@ import gettext
 appName = "Glpi Client"
 appExeFile = "GlpiClient.exe"
 appDirName = "GlpiClient"
-appVersion = "0.301"
+appVersion = "0.302"
 sessionToken = None
 
 # userPass enc, NOT FOR WinXP
