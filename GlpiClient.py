@@ -1694,8 +1694,6 @@ class AddTicketWin(QWidget):
 
                 # debug
                 print(requestTicketNewRequesterAdd)
-                ticketJson = json.loads(requestTicketNewRequesterAdd.content)
-                print(ticketJson)
 
                 #
                 ###
@@ -1803,12 +1801,14 @@ class AddTicketWin(QWidget):
 
                             multipart_form_data = {
                                 'uploadManifest': (None, '{"input": {"name": "fileAttached.png", "_filename": ["fileAttached.png"]}}'),
-                                'file': (fileBaseName, open(fileNameWithPath, 'rb')),
+                                'filename[0]': (fileBaseName, open(fileNameWithPath, 'rb')),
                             }
 
                             # screenshot add request
                             responseDocumentUpload = requests.post(glpiApiBaseUrl + '/Document/', headers=headersPost,
                                                                    files=multipart_form_data)
+
+
 
                             # get upload result
                             documentUploadJson = responseDocumentUpload.json()
@@ -1868,7 +1868,7 @@ class AddTicketWin(QWidget):
                         multipart_form_data = {
                             'uploadManifest': (
                             None, '{"input": {"name": "screenshotAttached.png", "_filename": ["screenshotAttached.png"]}}'),
-                            'file': (screenshotBaseName, open(screenshotNameWithPath, 'rb')),
+                            'filename[0]': (screenshotBaseName, open(screenshotNameWithPath, 'rb')),
                         }
 
                         # screenshot add request
@@ -2658,7 +2658,7 @@ class ShowTicketWin(QWidget):
 
                 # get followup author
                 ticketFollowupAuthorId = ticketFollowup['users_id']
-                print(ticketFollowupAuthorId)
+                print("ticketFollowupAuthorId: " + str(ticketFollowupAuthorId))
 
                 ################
 
@@ -2705,6 +2705,11 @@ class ShowTicketWin(QWidget):
                     logging.error('Error at %s', 'division', exc_info=e)
                     ticketFollowupAuthorSecondname = ""
                     pass
+
+                # debug
+                print(ticketFollowupAuthorLogin)
+                print(ticketFollowupAuthorFirstname)
+                print(ticketFollowupAuthorSecondname)
 
                 # change ticket Author's name to "Me"
                 if userId == ticketFollowupAuthorId:
