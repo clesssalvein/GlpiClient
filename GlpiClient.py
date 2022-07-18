@@ -22,6 +22,7 @@ import string
 import ntpath
 from time import strftime
 import wget
+import markdownify
 
 #PIC ATTACH CODE
 #doesn't work on winXP
@@ -2516,6 +2517,12 @@ class ShowTicketWin(QWidget):
                 # get solution content
                 ticketSolutionContent = ticketSolution['content']
 
+                # double convertion from HTML markdown to text
+                # (exactly in this format GLPI shows the text of the solution or followup!)
+                # For example:
+                # convert "&#60;p&#62;Решение&#60;/p&#62;" to "<p>Решение</p>", and then convert to "Решение"
+                ticketSolutionContent = markdownify.markdownify(markdownify.markdownify(ticketSolutionContent))
+
                 # remove HTML-TAG "&lt;p&gt;" from solution content
                 ticketSolutionContent = ticketSolutionContent.replace('&lt;p&gt;', '')
                 ticketSolutionContent = ticketSolutionContent.replace('&lt;/p&gt;', '')
@@ -2729,6 +2736,13 @@ class ShowTicketWin(QWidget):
 
                 # get followup content
                 ticketFollowupContent = ticketFollowup['content']
+
+                # double convertion from HTML markdown to text
+                # (exactly in this format GLPI shows the text of the solution or followup!)
+                # For example:
+                # convert "&#60;p&#62;Решение&#60;/p&#62;" to "<p>Решение</p>", and then convert to "Решение"
+                ticketFollowupContent = markdownify.markdownify(markdownify.markdownify(ticketFollowupContent))
+
                 print(ticketFollowupContent)
 
                 # fill table
