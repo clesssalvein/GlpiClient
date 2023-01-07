@@ -37,7 +37,7 @@ from PyQt5.QtGui import QIcon, QFont, QPixmap
 # spinner module (from file "waitingspinnerwidget.py")
 from waitingspinnerwidget import QtWaitingSpinner
 
-# check for app already running (from file "singleinstance.py")
+# check if app already running (from file "singleinstance.py")
 from singleinstance import singleinstance
 from sys import exit
 
@@ -68,7 +68,7 @@ myAppAlreadyRunning = singleinstance()
 print("Client IP: " + str(clientIp))
 print("Client Hostname: " + str(clientHostname))
 
-# check if auth.ini exist
+# check if auth.ini exists
 if os.path.exists(configAuthPath):
     print(_("auth.ini exists!"))
 
@@ -141,7 +141,7 @@ class AuthWin(QWidget):
         self.setWindowTitle(appName)
         self.setWindowIcon(QIcon('img/ico.png'))
 
-        # check is another instance of same program running
+        # check if another instance of the same program running
         if myAppAlreadyRunning.alreadyrunning():
             print("Another instance of this program is already running")
             QMessageBox.about(self, appName, _("The program is already running"))
@@ -222,7 +222,7 @@ class AuthWin(QWidget):
             # get pass from config
             userPass = configAuth.get("auth", "password")
 
-            # put password to window filed
+            # put password to window filled
             self.passEntry.setText(userPass)
 
         except Exception:
@@ -484,7 +484,7 @@ class AuthWin(QWidget):
     def settingsWinShow(self):
         self.exec_ = SettingsWin()
 
-    #app close func
+    # app close func
     def appClose(self):
 
         self.tray_icon.hide()
@@ -493,7 +493,7 @@ class AuthWin(QWidget):
         # debug
         print(sessionToken)
 
-        # if session token EXIST
+        # if session token EXISTS
         #if not sessionToken or adminSessionToken is None:
         #    sessionKillCommon()
 
@@ -871,7 +871,7 @@ class MainWin(QMainWindow):
             print(myTicketsListJson)
             print(type(myTicketsListJson))
 
-            # if success get json dict with user's tickets
+            # if success getting json dict with user's tickets
             if type(myTicketsListJson).__name__ == 'dict':
 
                 # if user have 0 tickets
@@ -892,7 +892,7 @@ class MainWin(QMainWindow):
                     # set header's alignment
                     table.horizontalHeaderItem(0).setTextAlignment(Qt.AlignHCenter)
 
-                # if user have >0 tickets
+                # if a user has >0 tickets
                 if myTicketsListJson['totalcount'] > 0:
 
                     myTicketsList = myTicketsListJson['data']
