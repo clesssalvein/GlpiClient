@@ -37,7 +37,7 @@ To make this App work you have to configure GLPI server with Users, Groups and P
 
 ![10-3](https://user-images.githubusercontent.com/9415718/179287541-a7864e8b-bd34-46fe-9663-d6e21449cc30.jpg)
 
-Also you have to turn ON API and add App-token
+Also you have to turn ON API and add an App-token
 
 ### API:
 
