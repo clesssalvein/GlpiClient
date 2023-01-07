@@ -48,7 +48,7 @@ Also you have to turn ON API and add App-token
 ![40-2](https://user-images.githubusercontent.com/9415718/179287701-66ce3eba-9ecb-469f-8ce7-631c76c9da61.jpg)
 
 # GlpiClient settings
-You have to edit config file **config/config.ini** by replacing corresponding variable values
+You have to edit the config file **config/config.ini** by replacing corresponding variable values
 
 # Usage
 
