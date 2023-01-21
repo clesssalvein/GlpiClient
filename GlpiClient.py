@@ -284,8 +284,11 @@ class AuthWin(QWidget):
         # show mainwin
         self.show()
 
-        # HIDE APP TO TRAY AT STARTUP
-        self.hide()
+        # HIDE (MINIMIZE) APP TO TRAY AT STARTUP
+        # if checked checkbox hideAppWindowToTrayAtStartup(1) in config file
+        if hideAppWindowToTrayAtStartup == "1":
+            # hide (minimize) appWindow at startup
+            self.hide()
 
     def center(self):
         qr = self.frameGeometry()
@@ -1269,7 +1272,7 @@ class SettingsWin(QWidget):
 
     def initUI(self):
         # create Settings win
-        self.setFixedSize(300, 240)
+        self.setFixedSize(500, 240)
         self.center()
         self.setWindowTitle(_("Settings"))
         self.setWindowIcon(QIcon('img\ico.png'))
@@ -1288,6 +1291,8 @@ class SettingsWin(QWidget):
 
         # get lang dirs list
         langDirs = [f for f in listdir(langDirsPath) if not isfile(join(langDirsPath, f))]
+
+        # debug
         # print(type(langDirs))
         # print(langDirs)
         # print(len(langDirs))
@@ -1316,6 +1321,22 @@ class SettingsWin(QWidget):
             # UNcheck checkboxRememberLogin
             self.settingsCheckboxAutoUpdate.setChecked(False)
 
+        # hideAppWindowToTrayAtStartup option
+        self.settingsHideAppWindowToTrayAtStartup = QLabel(self)
+        self.settingsHideAppWindowToTrayAtStartup.setFont(QFont("Decorative", 9))
+        self.settingsHideAppWindowToTrayAtStartup.setText(_("Hide app window to tray at startup") + ':')
+
+        # add checkbox autoupdate
+        self.settingsCheckboxHideAppWindowToTrayAtStartup = QCheckBox(self)
+
+        # if checked checkbox hideAppWindowToTrayAtStartup(1) in config file
+        if hideAppWindowToTrayAtStartup == "1":
+            # check checkboxRememberLogin
+            self.settingsCheckboxHideAppWindowToTrayAtStartup.setChecked(True)
+        if hideAppWindowToTrayAtStartup == "0":
+            # UNcheck checkboxRememberLogin
+            self.settingsCheckboxHideAppWindowToTrayAtStartup.setChecked(False)
+
         # OK button create
         self.settingsOkButton = QPushButton(_("OK"), self)
         self.settingsOkButton.setFixedSize(80, 30)
@@ -1332,8 +1353,10 @@ class SettingsWin(QWidget):
         gridSettings.addWidget(self.settingsAppLangSelect, 1, 1, 1, 1, alignment=Qt.AlignCenter)
         gridSettings.addWidget(self.settingsAutoUpdateOption, 2, 0, 1, 1, alignment=Qt.AlignCenter)
         gridSettings.addWidget(self.settingsCheckboxAutoUpdate, 2, 1, 1, 1, alignment=Qt.AlignCenter)
-        gridSettings.addWidget(self.settingsOkButton, 3, 0, 1, 1, alignment=Qt.AlignCenter)
-        gridSettings.addWidget(self.settingsExitButton, 3, 1, 1, 1, alignment=Qt.AlignCenter)
+        gridSettings.addWidget(self.settingsHideAppWindowToTrayAtStartup, 3, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridSettings.addWidget(self.settingsCheckboxHideAppWindowToTrayAtStartup, 3, 1, 1, 1, alignment=Qt.AlignCenter)
+        gridSettings.addWidget(self.settingsOkButton, 4, 0, 1, 1, alignment=Qt.AlignRight)
+        gridSettings.addWidget(self.settingsExitButton, 4, 1, 1, 1, alignment=Qt.AlignLeft)
         self.setLayout(gridSettings)
 
         self.show()
@@ -1366,6 +1389,15 @@ class SettingsWin(QWidget):
         # if checkbox AUTOUPDATE is UNchecked - write to config file
         else:
             config.set("main", "autoupdate", "0")
+
+        # if checkbox hideAppWindowToTrayAtStartup is checked - write to config file
+        if self.settingsCheckboxHideAppWindowToTrayAtStartup.isChecked():
+            # remember in config file
+            config.set("main", "hideappwindowtotrayatstartup", "1")
+
+        # if checkbox settingsCheckboxHideAppWindowToTrayAtStartup is UNchecked - write to config file
+        else:
+            config.set("main", "hideappwindowtotrayatstartup", "0")
 
         # write settings to config file
         with open(configPath, "w", encoding="utf-8") as config_file:
@@ -2073,7 +2105,7 @@ class ShowTicketWin(QWidget):
         # fill tableTicketData
         tableTicketData.setItem(0, 0, QTableWidgetItem(myTicketAuthor))
         tableTicketData.setItem(0, 1, QTableWidgetItem(myTicketCreateDate))
-        # markdownify: getting rid of a HTML-markdown in the content of a ticket
+        # markdownify: getting rid of a HTML-markdown in a content of the ticket
         tableTicketData.setItem(0, 2, QTableWidgetItem(markdownify.markdownify(markdownify.markdownify(myTicketContent))))
         tableTicketData.setItem(0, 3, QTableWidgetItem(myTicketStatus))
 

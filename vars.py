@@ -27,6 +27,7 @@ config.read(configPath, encoding="utf8")
 glpiApiBaseUrl = config.get("main", "glpiApiBaseUrl")
 appToken = config.get("main", "appToken")
 appLang = config.get("main", "lang")
+hideAppWindowToTrayAtStartup = config.get("main", "hideappwindowtotrayatstartup")
 
 # gettext multilang
 langDirsPath = "lang/i18n"
