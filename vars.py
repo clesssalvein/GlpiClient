@@ -10,10 +10,12 @@ import gettext
 
 # VARS
 
-appName = "Glpi Client"
+appName = "GlpiClient"
 appExeFile = "GlpiClient.exe"
 appDirName = "GlpiClient"
-appVersion = "0.303"
+appVersion = "0.304"
+authorEmail = "clesssalvein@gmail.com"
+appHomepage = "https://github.com/clesssalvein/GlpiClient"
 sessionToken = None
 
 # userPass enc, NOT FOR WinXP

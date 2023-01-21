@@ -292,3 +292,15 @@ msgstr "Это окно закроется автоматически..."
 
 msgid "App autoupdate"
 msgstr "Автообновление программы"
+
+msgid "Hide app window to tray at startup"
+msgstr "Скрыть окно программы в системном лотке при запуске"
+
+msgid "Author Contact"
+msgstr "Связаться с автором"
+
+msgid "App Homepage"
+msgstr "Страница приложения"
+
+msgid "Interface Translations"
+msgstr "Перевод интерфейса"

@@ -1218,7 +1218,7 @@ class AboutWin(QWidget):
 
     def initUI(self):
         # create About win
-        self.setFixedSize(300, 240)
+        self.setFixedSize(400, 300)
         self.center()
         self.setWindowTitle(_("About..."))
         self.setWindowIcon(QIcon('img\ico.png'))
@@ -1227,13 +1227,38 @@ class AboutWin(QWidget):
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint )
 
         self.glpiPic = QLabel(self)
-        glpiPicPixmap = QPixmap('img\ico.png')
+        glpiPicPixmap = QPixmap('img\ico64x64.png')
         self.glpiPic.setPixmap(glpiPicPixmap)
 
         # label app
         self.aboutAppHeadLabel = QLabel(self)
-        self.aboutAppHeadLabel.setFont(QFont("Decorative", 11))
-        self.aboutAppHeadLabel.setText(appName + " " + appVersion)
+        self.aboutAppHeadLabel.setFont(QFont("Decorative", 8))
+        self.aboutAppHeadLabel.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        self.aboutAppHeadLabel.setText(appName + " " + "v" + appVersion)
+
+        # author contact
+        self.aboutAuthorContact = QLabel(self)
+        self.aboutAuthorContact.setFont(QFont("Decorative", 8))
+        self.aboutAuthorContact.setAlignment(Qt.AlignCenter)
+        self.aboutAuthorContact.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        self.aboutAuthorContact.setText(_("Author Contact") + ":" +
+                                        '\n' + authorEmail)
+
+        # app homepage
+        self.aboutAppHomepage = QLabel(self)
+        self.aboutAppHomepage.setFont(QFont("Decorative", 8))
+        self.aboutAppHomepage.setAlignment(Qt.AlignCenter)
+        self.aboutAppHomepage.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        self.aboutAppHomepage.setText(_("App Homepage") + ":" +
+                                      '\n' + appHomepage)
+
+        # app translation
+        self.aboutAppTranslations = QLabel(self)
+        self.aboutAppTranslations.setFont(QFont("Decorative", 8))
+        self.aboutAppTranslations.setAlignment(Qt.AlignCenter)
+        self.aboutAppTranslations.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        self.aboutAppTranslations.setText(_("Interface Translations") + ":" +
+                                          '\n' + "Italian - trisosamu")
 
         # OK-exit button create
         self.aboutOkButton = QPushButton(_("OK"), self)
@@ -1245,7 +1270,10 @@ class AboutWin(QWidget):
         gridAbout = QGridLayout()
         gridAbout.addWidget(self.glpiPic, 0, 0, 1, 1, alignment=Qt.AlignCenter)
         gridAbout.addWidget(self.aboutAppHeadLabel, 1, 0, 1, 1, alignment=Qt.AlignCenter)
-        gridAbout.addWidget(self.aboutOkButton, 2, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridAbout.addWidget(self.aboutAuthorContact, 2, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridAbout.addWidget(self.aboutAppHomepage, 3, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridAbout.addWidget(self.aboutAppTranslations, 4, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridAbout.addWidget(self.aboutOkButton, 5, 0, 1, 1, alignment=Qt.AlignCenter)
         self.setLayout(gridAbout)
 
         self.show()
