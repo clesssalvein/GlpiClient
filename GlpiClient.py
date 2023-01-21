@@ -2073,7 +2073,8 @@ class ShowTicketWin(QWidget):
         # fill tableTicketData
         tableTicketData.setItem(0, 0, QTableWidgetItem(myTicketAuthor))
         tableTicketData.setItem(0, 1, QTableWidgetItem(myTicketCreateDate))
-        tableTicketData.setItem(0, 2, QTableWidgetItem(myTicketContent))
+        # markdownify: getting rid of a HTML-markdown in the content of a ticket
+        tableTicketData.setItem(0, 2, QTableWidgetItem(markdownify.markdownify(markdownify.markdownify(myTicketContent))))
         tableTicketData.setItem(0, 3, QTableWidgetItem(myTicketStatus))
 
         # set alignment for text in ALL columns
