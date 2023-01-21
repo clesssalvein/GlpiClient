@@ -1,0 +1,317 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+
+msgid "test"
+msgstr "test"
+
+msgid "App language is"
+msgstr "La lingua dell'app è"
+
+msgid "English"
+msgstr "Italiano"
+
+msgid "auth.ini exists!"
+msgstr "auth.ini esistente!"
+
+msgid "auth.ini is a file!"
+msgstr "auth.ini è un file!"
+
+msgid "auth.ini is a directory! delete directory auth.ini"
+msgstr "auth.ini è una directory! delete directory auth.ini"
+
+msgid "Create auth.ini"
+msgstr "Creare auth.ini"
+
+msgid "auth.ini doesn't exist! create auth.ini"
+msgstr "auth.ini non esiste! creare auth.ini"
+
+msgid "The program is already running"
+msgstr "Il programma è già in esecuzione"
+
+msgid "Quit"
+msgstr "Esci"
+
+msgid "Authorization"
+msgstr ""
+"Comune di Beinasco\n"
+"Help Desk"
+
+msgid "Login"
+msgstr "Utente"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Login doesn't exist in auth.ini"
+msgstr "Utente non corretto"
+
+msgid "Password doesn't exist in auth.ini"
+msgstr "Password sbagliata"
+
+msgid "Remember Login and Password"
+msgstr "Ricorda credenziali"
+
+msgid "Sign in"
+msgstr "Accedi"
+
+msgid "Auth error"
+msgstr "Errore autenticazione"
+
+msgid "sessionTokenJson is NOT correct"
+msgstr "sessionTokenJson non è corretto"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Restart application to apply settings"
+msgstr "Riavvia l'applicazione per applicare le impostazioni"
+
+msgid "Settings"
+msgstr "Impostazioni"
+
+msgid "About..."
+msgstr "Info su..."
+
+msgid "sessionTokenJson is correct"
+msgstr "sessionTokenJson è corretto"
+
+msgid "Auth error. 'session_token' not found"
+msgstr "Errore autenticazione 'session_token' non trovato"
+
+msgid "Auth success. 'session_token' found"
+msgstr "Autenticazione effettuata. 'session_token' trovato"
+
+msgid "Connection error"
+msgstr "Errore connessione"
+
+msgid "is minimized to the system tray"
+msgstr "è iconizzato nella barra delle applicazioni"
+
+msgid "Failed to download an update"
+msgstr "Impossibile scaricare l'aggiornamento"
+
+msgid "Sign out"
+msgstr "Esci"
+
+msgid "Create new ticket"
+msgstr "Crea un nuovo ticket"
+
+msgid "My tickets"
+msgstr "I miei ticket"
+
+msgid "Open tickets only"
+msgstr "Mostra solo ticket aperti"
+
+msgid "Loading..."
+msgstr "Caricamento..."
+
+msgid "You have no tickets"
+msgstr "Non ci sono ticket"
+
+msgid "Tickets not found"
+msgstr "Nessun Ticket Aperto"
+
+msgid "Ticket ID"
+msgstr "Ticket ID"
+
+msgid "Creation date"
+msgstr "Data Creazione"
+
+msgid "Ticket creation date and time"
+msgstr "Data e ora di creazione del ticket"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Ticket name"
+msgstr "Titolo del ticket"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Ticket status"
+msgstr "Stato del ticket"
+
+msgid "New"
+msgstr "Nuovo"
+
+msgid "In progress (assigned)"
+msgstr "In corso (Assegnato)"
+
+msgid "In progress (planned)"
+msgstr "In corso (Programmato)"
+
+msgid "Awaiting decision"
+msgstr "In attesa"
+
+msgid "Solved"
+msgstr "Risolto"
+
+msgid "Closed"
+msgstr "Chiuso"
+
+msgid "Update a list of tickets"
+msgstr "Aggiorna la lista dei ticket"
+
+msgid "Language"
+msgstr "Lingua"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Cancella"
+
+msgid "Contact phone"
+msgstr "Numero di telefono"
+
+msgid "Problem computer number"
+msgstr "Nome del computer"
+
+msgid "Describe your problem..."
+msgstr "Descrivi il problema..."
+
+msgid "From"
+msgstr "Da"
+
+msgid "To"
+msgstr "A"
+
+msgid "Attach a screenshot"
+msgstr "Allega uno screenshot"
+
+msgid ""
+"To attach a screenshot,\n"
+"press the 'PrintScreen' key on your keyboard,\n"
+"and then the 'Attach a screenshot' button"
+msgstr ""
+"Per allegare uno screenshot,\n"
+"premi il pulsante stampa sulla tua tastiera,\n"
+"e clicca sul pulsante 'Allega uno screenshot'"
+
+msgid ""
+"Press the 'PrintScreen' key on your keyboard\n"
+" and then the 'Attach a screenshot' button"
+msgstr ""
+"Premi il pulsante stamp sulla tua tastiera,\n"
+"e clicca sul pulsante 'Allega uno screenshot'"
+
+msgid "Attach an Image"
+msgstr "Allega un Immagine"
+
+msgid "Click the 'Attach an Image' button"
+msgstr "Premi il pulsante 'Allega un immagine'"
+
+msgid "Create Ticket"
+msgstr "Crea un Ticket"
+
+msgid "Screenshot attached to the ticket!"
+msgstr "Screenshot allegato al ticket!"
+
+msgid "Error"
+msgstr "Errore"
+
+msgid ""
+"Error attaching a screenshot.\n"
+"To attach a screenshot, press the 'PrintScreen' key on your keyboard and then the 'Attach a screenshot' button'"
+msgstr "Errore durante il caricamento dello screenshot."
+
+msgid "Please fill in all required fields"
+msgstr "Per favore compila tutti i dati"
+
+msgid "Computer name"
+msgstr "Nome computer"
+
+msgid "Customer phone"
+msgstr "Numero telefono"
+
+msgid "Ticket accepted"
+msgstr "Ticket inserito"
+
+msgid "Your ticket has been accepted under the number"
+msgstr "Il tuo ticket è stato inserito con il numero"
+
+msgid "Ticket"
+msgstr "Ticket"
+
+msgid "Solution"
+msgstr "Soluzione"
+
+msgid "Comments"
+msgstr "Commenti"
+
+msgid "Author"
+msgstr "Autore"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Ticket text"
+msgstr "Testo del ticket"
+
+msgid "Specialist"
+msgstr "Tecnico"
+
+msgid "Assigned specialist"
+msgstr "Tecnico assegnatario"
+
+msgid "Group of specialists"
+msgstr "Gruppo tecnico"
+
+msgid "Assigned group of specialists"
+msgstr "Assegnato al gruppo tecnico"
+
+msgid "Solution text"
+msgstr "Testo della soluzione"
+
+msgid "There is no solution"
+msgstr "Non c'è una soluzione"
+
+msgid "Comment"
+msgstr "Commento"
+
+msgid "Comment text"
+msgstr "Testo del commento"
+
+msgid "Me"
+msgstr "Io"
+
+msgid "There is no comments"
+msgstr "Non ci sono commenti"
+
+msgid "Write a comment..."
+msgstr "Scrivi un commento..."
+
+msgid "Send"
+msgstr "Invia"
+
+msgid "Comments cannot be added to the closed ticket"
+msgstr "I commenti non possono essere aggiunti ai ticket chiusi"
+
+msgid "Comment field must not be empty"
+msgstr "Il campo commmento non può essere vuoto"
+
+msgid "App update..."
+msgstr "Aggiornamento app..."
+
+msgid "Fail to unzip update"
+msgstr "Decompressione update fallita"
+
+msgid "Fail to download update"
+msgstr "Impossibile scaricare l'aggiornamento"
+
+msgid "This window will close automatically..."
+msgstr "Questa finestra si chiuderà automaticamente..."
+
+msgid "App autoupdate"
+msgstr "Aggiornamento automatico app"
