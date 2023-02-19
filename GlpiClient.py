@@ -32,13 +32,13 @@ from PyQt5.QtWidgets import QWidget, QSystemTrayIcon, QAction, QMenu, QLabel, QL
     QGridLayout, QMainWindow, QDesktopWidget, QTableWidget, QDateTimeEdit, QAbstractItemView, QTableWidgetItem, \
     QAbstractScrollArea, QHeaderView, QMessageBox, QPlainTextEdit, QApplication, QFileDialog, QComboBox, QVBoxLayout
 from PyQt5.QtCore import Qt, QCoreApplication, QTimer, QDate
-from PyQt5.QtGui import QIcon, QFont, QPixmap
+from PyQt5.QtGui import QIcon, QFont, QPixmap, QWindow
 
 # spinner module (from file "waitingspinnerwidget.py")
 from waitingspinnerwidget import QtWaitingSpinner
 
 # check if app already running (from file "singleinstance.py")
-from singleinstance import singleinstance
+#from singleinstance import singleinstance
 from sys import exit
 
 
@@ -143,9 +143,22 @@ class AuthWin(QWidget):
 
         # check if another instance of the same program running
         if myAppAlreadyRunning.alreadyrunning():
-            print("Another instance of this program is already running")
-            QMessageBox.about(self, appName, _("The program is already running"))
-            exit(0)
+
+            # if checked checkbox hideAppWindowToTrayOnClose(1) in config file
+            # MessageBox "The program is already running"
+            if hideAppWindowToTrayOnClose == "1":
+                print("Another instance of this program is already running")
+                QMessageBox.about(self, appName, _("The program is already running"))
+                exit(0)
+
+            # if checked checkbox hideAppWindowToTrayOnClose(0) in config file
+            # maximize app from panel
+            if hideAppWindowToTrayOnClose == "0":
+                w = WindowMgr()
+                w.find_window_wildcard("GlpiClient")
+                w.set_foreground()
+                exit(0)
+
         # no app running, safe to continue...
         print("No another instance is running, can continue here")
 
@@ -284,11 +297,16 @@ class AuthWin(QWidget):
         # show mainwin
         self.show()
 
-        # HIDE (MINIMIZE) APP TO TRAY AT STARTUP
         # if checked checkbox hideAppWindowToTrayAtStartup(1) in config file
         if hideAppWindowToTrayAtStartup == "1":
-            # hide (minimize) appWindow at startup
-            self.hide()
+
+            # hide (minimize) appWindow to tray at startup
+            if hideAppWindowToTrayOnClose == "1":
+                self.hide()
+
+            # minimize window to windows panel
+            if hideAppWindowToTrayOnClose == "0":
+                self.setWindowState(self.windowState() | QWindow.Minimized)
 
     def center(self):
         qr = self.frameGeometry()
@@ -471,13 +489,20 @@ class AuthWin(QWidget):
 
     def closeEvent(self, event):
         event.ignore()
-        self.hide()
-        self.tray_icon.showMessage(
-            appName,
-            appName + " " + "is minimized to the system tray",
-            #QSystemTrayIcon.Information,
-            2000
-        )
+
+        # HIDE (MINIMIZE) APP TO TRAY ON CLOSE
+        # if checked checkbox hideAppWindowToTrayOnClose(1) in config file
+        if hideAppWindowToTrayOnClose == "1":
+            self.hide()
+            self.tray_icon.showMessage(
+                appName,
+                appName + " " + "is minimized to the system tray",
+                #QSystemTrayIcon.Information,
+                2000
+            )
+        # minimize window to windows panel
+        if hideAppWindowToTrayOnClose == "0":
+            self.setWindowState(self.windowState() | QWindow.Minimized)
 
     # about button
     def aboutWinShow(self):
@@ -1182,13 +1207,19 @@ class MainWin(QMainWindow):
 
     def closeEvent(self, event):
         event.ignore()
-        self.hide()
-        self.tray_icon.showMessage(
-            appName,
-            appName + " " + _("is minimized to the system tray"),
-            #QSystemTrayIcon.Information,
-            2000
-        )
+
+        # HIDE (MINIMIZE) APP TO TRAY ON CLOSE
+        if hideAppWindowToTrayOnClose == "1":
+            self.hide()
+            self.tray_icon.showMessage(
+                appName,
+                appName + " " + _("is minimized to the system tray"),
+                #QSystemTrayIcon.Information,
+                2000
+            )
+        # minimize window to windows panel
+        if hideAppWindowToTrayOnClose == "0":
+            self.setWindowState(self.windowState() | QWindow.Minimized)
 
     # app close func
     def appClose(self):
@@ -1300,7 +1331,7 @@ class SettingsWin(QWidget):
 
     def initUI(self):
         # create Settings win
-        self.setFixedSize(500, 240)
+        self.setFixedSize(600, 240)
         self.center()
         self.setWindowTitle(_("Settings"))
         self.setWindowIcon(QIcon('img\ico.png'))
@@ -1341,7 +1372,7 @@ class SettingsWin(QWidget):
         # add checkbox autoupdate
         self.settingsCheckboxAutoUpdate = QCheckBox(self)
 
-        # if checked checkbox REMEMBER LOGIN IS TRUE(1) in config file
+        # if checked checkbox autoupdate IS TRUE(1) in config file
         if appAutoUpdate == "1":
             # check checkboxRememberLogin
             self.settingsCheckboxAutoUpdate.setChecked(True)
@@ -1352,9 +1383,9 @@ class SettingsWin(QWidget):
         # hideAppWindowToTrayAtStartup option
         self.settingsHideAppWindowToTrayAtStartup = QLabel(self)
         self.settingsHideAppWindowToTrayAtStartup.setFont(QFont("Decorative", 9))
-        self.settingsHideAppWindowToTrayAtStartup.setText(_("Hide app window to tray at startup") + ':')
+        self.settingsHideAppWindowToTrayAtStartup.setText(_("Hide app window at startup") + ':')
 
-        # add checkbox autoupdate
+        # add checkbox hideAppWindowToTrayAtStartup
         self.settingsCheckboxHideAppWindowToTrayAtStartup = QCheckBox(self)
 
         # if checked checkbox hideAppWindowToTrayAtStartup(1) in config file
@@ -1364,6 +1395,22 @@ class SettingsWin(QWidget):
         if hideAppWindowToTrayAtStartup == "0":
             # UNcheck checkboxRememberLogin
             self.settingsCheckboxHideAppWindowToTrayAtStartup.setChecked(False)
+
+        #  option
+        self.settingsHideAppWindowToTrayOnClose = QLabel(self)
+        self.settingsHideAppWindowToTrayOnClose.setFont(QFont("Decorative", 9))
+        self.settingsHideAppWindowToTrayOnClose.setText(_("Hide app window to tray on App close") + ':')
+
+        # add checkbox hideAppWindowToTrayAtStartup
+        self.settingsCheckboxHideAppWindowToTrayOnClose = QCheckBox(self)
+
+        # if checked checkbox hideAppWindowToTrayAtStartup(1) in config file
+        if hideAppWindowToTrayOnClose == "1":
+            # check checkboxRememberLogin
+            self.settingsCheckboxHideAppWindowToTrayOnClose.setChecked(True)
+        if hideAppWindowToTrayOnClose == "0":
+            # UNcheck checkboxRememberLogin
+            self.settingsCheckboxHideAppWindowToTrayOnClose.setChecked(False)
 
         # OK button create
         self.settingsOkButton = QPushButton(_("OK"), self)
@@ -1383,8 +1430,10 @@ class SettingsWin(QWidget):
         gridSettings.addWidget(self.settingsCheckboxAutoUpdate, 2, 1, 1, 1, alignment=Qt.AlignCenter)
         gridSettings.addWidget(self.settingsHideAppWindowToTrayAtStartup, 3, 0, 1, 1, alignment=Qt.AlignCenter)
         gridSettings.addWidget(self.settingsCheckboxHideAppWindowToTrayAtStartup, 3, 1, 1, 1, alignment=Qt.AlignCenter)
-        gridSettings.addWidget(self.settingsOkButton, 4, 0, 1, 1, alignment=Qt.AlignRight)
-        gridSettings.addWidget(self.settingsExitButton, 4, 1, 1, 1, alignment=Qt.AlignLeft)
+        gridSettings.addWidget(self.settingsHideAppWindowToTrayOnClose, 4, 0, 1, 1, alignment=Qt.AlignCenter)
+        gridSettings.addWidget(self.settingsCheckboxHideAppWindowToTrayOnClose, 4, 1, 1, 1, alignment=Qt.AlignCenter)
+        gridSettings.addWidget(self.settingsOkButton, 5, 0, 1, 1, alignment=Qt.AlignRight)
+        gridSettings.addWidget(self.settingsExitButton, 5, 1, 1, 1, alignment=Qt.AlignLeft)
         self.setLayout(gridSettings)
 
         self.show()
@@ -1426,6 +1475,15 @@ class SettingsWin(QWidget):
         # if checkbox settingsCheckboxHideAppWindowToTrayAtStartup is UNchecked - write to config file
         else:
             config.set("main", "hideappwindowtotrayatstartup", "0")
+
+        # if checkbox hideAppWindowToTrayOnClose is checked - write to config file
+        if self.settingsCheckboxHideAppWindowToTrayOnClose.isChecked():
+            # remember in config file
+            config.set("main", "hideappwindowtotrayonclose", "1")
+
+        # if checkbox settingsCheckboxHideAppWindowToTrayOnClose is UNchecked - write to config file
+        else:
+            config.set("main", "hideappwindowtotrayonclose", "0")
 
         # write settings to config file
         with open(configPath, "w", encoding="utf-8") as config_file:

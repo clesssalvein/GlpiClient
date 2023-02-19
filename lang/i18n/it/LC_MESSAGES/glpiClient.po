@@ -314,8 +314,11 @@ msgstr "Questa finestra si chiuderà automaticamente..."
 msgid "App autoupdate"
 msgstr "Aggiornamento automatico app"
 
-msgid "Hide app window to tray at startup"
+msgid "Hide app window at startup"
 msgstr "Nascondi la finestra del programma nella barra delle applicazioni all'avvio"
+
+msgid "Hide app window to tray on App close"
+msgstr "Hide app window to tray on App close"
 
 msgid "Author Contact"
 msgstr "Autore Contatto"

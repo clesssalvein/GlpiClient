@@ -293,8 +293,11 @@ msgstr "This window will close automatically..."
 msgid "App autoupdate"
 msgstr "App autoupdate"
 
-msgid "Hide app window to tray at startup"
-msgstr "Hide app window to tray at startup"
+msgid "Hide app window at startup"
+msgstr "Hide app window at startup"
+
+msgid "Hide app window to tray on App close"
+msgstr "Hide app window to tray on App close"
 
 msgid "Author Contact"
 msgstr "Author Contact"

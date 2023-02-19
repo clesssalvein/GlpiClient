@@ -13,7 +13,7 @@ import gettext
 appName = "GlpiClient"
 appExeFile = "GlpiClient.exe"
 appDirName = "GlpiClient"
-appVersion = "0.304"
+appVersion = "0.305"
 authorEmail = "clesssalvein@gmail.com"
 appHomepage = "https://github.com/clesssalvein/GlpiClient"
 sessionToken = None
@@ -30,6 +30,7 @@ glpiApiBaseUrl = config.get("main", "glpiApiBaseUrl")
 appToken = config.get("main", "appToken")
 appLang = config.get("main", "lang")
 hideAppWindowToTrayAtStartup = config.get("main", "hideappwindowtotrayatstartup")
+hideAppWindowToTrayOnClose = config.get("main", "hideappwindowtotrayonclose")
 
 # gettext multilang
 langDirsPath = "lang/i18n"
